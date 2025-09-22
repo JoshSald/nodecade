@@ -1,4 +1,4 @@
-export const playPigLatin = (rl, callback) => {
+export const playPigLatin = (rl, callback = () => {}) => {
   rl.question("What would you like to say?: ", (input) => {
     console.log("Pig Latin:", toPigLatin(input));
 
