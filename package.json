@@ -1,0 +1,23 @@
+{
+  "name": "nodecade",
+  "version": "1.0.0",
+  "description": "A Mini Arcade of terminal games",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshSald/nodecade.git"
+  },
+  "keywords": [
+    "Terminal",
+    "Games"
+  ],
+  "author": "JoshSald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshSald/nodecade/issues"
+  },
+  "homepage": "https://github.com/JoshSald/nodecade#readme"
+}
