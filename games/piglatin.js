@@ -1,4 +1,4 @@
-export const playPigLatin = (rl, callback) => {
+export const playPigLatin = (rl, callback = () => {}) => {
   rl.question("What would you like to say?: ", (input) => {
     console.log("Pig Latin:", toPigLatin(input));
 
@@ -12,7 +12,7 @@ export const playPigLatin = (rl, callback) => {
   });
 };
 
-function toPigLatin(text) {
+export const toPigLatin = (text) => {
   const lower = text.toLowerCase();
   const translated = lower
     .split(" ")
@@ -30,4 +30,4 @@ function toPigLatin(text) {
     .join(" ");
 
   return translated.replace(/(^\w|[.!?]\s+\w)/g, (c) => c.toUpperCase());
-}
+};

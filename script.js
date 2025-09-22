@@ -1,6 +1,6 @@
 import readline from "readline";
 import { playRPS } from "./games/rps.js";
-import { playPigLatin } from "./games/piglatin.js";
+import { playPigLatin, toPigLatin } from "./games/piglatin.js";
 import { encryptMessage, runCipher } from "./games/cipher.js";
 
 const rl = readline.createInterface({
@@ -36,19 +36,23 @@ const cliSelect = (game, text, shift) => {
       playRPS(rl);
       break;
     case "piglatin":
-      playPigLatin(rl);
+      runTextGame(toPigLatin, text);
       break;
     case "cipher":
-      if (!text) {
-        console.log("No message provided to encrypt.");
-      } else {
-        console.log(`Encrypted Message: ${encryptMessage(text, shift)}`);
-      }
+      runTextGame(encryptMessage, text, shift);
       break;
     default:
       console.log(`${game} is not a valid game.`);
       rl.close();
   }
+};
+
+const runTextGame = (func, text, options) => {
+  if (!text) {
+    console.log("No message provided!");
+    return;
+  }
+  console.log(func(text, options));
 };
 
 if (cliArgs.length > 2) {
