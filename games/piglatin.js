@@ -17,7 +17,7 @@ function toPigLatin(text) {
   const translated = lower
     .split(" ")
     .map((word) => {
-      const match = word.match(/^(\w+)([.,!?]*)$/);
+      const match = word.match(/^([a-zA-Z'-]+)([.,!?]*)$/);
       if (!match) return word;
 
       const [, base, punct] = match;
