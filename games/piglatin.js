@@ -13,10 +13,21 @@ export const playPigLatin = (rl, callback) => {
 };
 
 function toPigLatin(text) {
-  return text
+  const lower = text.toLowerCase();
+  const translated = lower
     .split(" ")
-    .map((word) =>
-      /^[aeiou]/i.test(word) ? word + "yay" : word.slice(1) + word[0] + "ay"
-    )
+    .map((word) => {
+      const match = word.match(/^(\w+)([.,!?]*)$/);
+      if (!match) return word;
+
+      const [, base, punct] = match;
+      const pig = /^[aeiou]/i.test(base)
+        ? base + "yay"
+        : base.slice(1) + base[0] + "ay";
+
+      return pig + (punct || "");
+    })
     .join(" ");
+
+  return translated.replace(/(^\w|[.!?]\s+\w)/g, (c) => c.toUpperCase());
 }
