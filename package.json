@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Mini Arcade of terminal games",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "test"
   },
