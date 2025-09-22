@@ -1,7 +1,7 @@
 export const playRPS = (rl, callback) => {
   rl.question("Choose your weapon! (rock | paper | scissors): ", (user) => {
     const choices = ["rock", "paper", "scissors"];
-    const cpu = choices[Math.floor(Math.random() * 3)];
+    const cpu = choices[Math.floor(Math.random() * choices.length)];
 
     user = user.toLowerCase();
 
