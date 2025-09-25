@@ -15,9 +15,9 @@ export const playRPS = (rl, callback = () => {}) => {
       (user === "paper" && cpu === "rock") ||
       (user === "scissors" && cpu === "paper")
     ) {
-      console.log("You win!");
+      console.log("🏆 You win! 🏆");
     } else {
-      console.log("I win!");
+      console.log("💀 CPU wins! 💀");
     }
 
     rl.question("\nPlay again? (y/n): ", (answer) => {
