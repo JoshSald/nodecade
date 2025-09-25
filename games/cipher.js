@@ -10,7 +10,7 @@ export const runCipher = (rl, callback = () => {}) => {
           if (answer.toLowerCase().startsWith("y")) {
             runCipher(rl, callback);
           } else {
-            callback();
+            rl.close();
           }
         }
       );

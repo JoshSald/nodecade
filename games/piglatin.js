@@ -4,9 +4,9 @@ export const playPigLatin = (rl, callback = () => {}) => {
 
     rl.question("\nTranslate again? (y/n): ", (answer) => {
       if (answer.toLowerCase().startsWith("y")) {
-        playPigLatin(rl, callback);
+        playPigLatin(rl, rl.close());
       } else {
-        callback();
+        rl.close();
       }
     });
   });
