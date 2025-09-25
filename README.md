@@ -42,12 +42,13 @@ Currently, there is no difference when calling the game via CLI or in interactiv
 
 #### CLI Usage
 
-- Run `npm run game rps` to play Rock Paper Scissors (interactive mode)
+- Run `npm run game -- rps` to play Rock Paper Scissors (interactive mode)
+- Run `npm run game -- rps --battle-mode` to play Rock Paper Scissors (Battle mode)
 
 #### Future Improvements:
 
 - [ ] Add Multiplayer Mode ([#4](https://github.com/JoshSald/nodecade/issues/4))
-- [ ] Add Game Style (best of 3, etc) ([#5](https://github.com/JoshSald/nodecade/issues/5))
+- [✅] Add Game Style (best of 3, etc) ([#5](https://github.com/JoshSald/nodecade/issues/5))
   - [ ] Score Tracking
 
 ---
@@ -86,6 +87,6 @@ This tool can be used to encrypt messages as Caesar did. The game defaults to a 
 
 [^1]:
     [Suetonius Tranquillus - THE LIVES OF THE TWELVE CAESARS
-    ](https://www.gutenberg.org/files/6400/6400-h/6400-h.htm) - "[...] if there was occasion for secrecy, he wrote in cyphers; that is, he used the alphabet in such a manner, that not a single word could be made out. The way to decipher those epistles was to substitute the fourth for the first letter, as d for a, and so for the other letters respectively. "
+    ](https://www.gutenberg.org/files/6400/6400-h/6400-h.htm) - "[...] if there was occasion for secrecy, he wrote in cyphers; that is, he used the alphabet in such a manner, that not a single word could be made out. The way to decipher those epistles was to substitute the fourth for the first letter, as d for a, and so for the other letters respectively."
 
 [^2]: [Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) - Wikipedia
